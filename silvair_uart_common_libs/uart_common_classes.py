@@ -175,6 +175,16 @@ class UartAdapter(threading.Thread):
         if observer_obj not in self.observers:
             self.observers.append(observer_obj)
 
+    def unregister_observer(self, observer_obj):
+        """
+        Unregister objects for notification. Unregistered object has to be of UartAdapterObserver class.
+
+        :param observer_obj: instance of object
+        """
+        assert isinstance(observer_obj,
+                          UartAdapterObserver), "[UART ADAPTER] Invalid class instance. Expected 'UartAdapterObserver'"
+        self.observers.remove(observer_obj)
+
     def _insert_parsed_frame(self, frame):
         """
         Populates queues for all registered objects with parsed frame.
