@@ -45,7 +45,8 @@ class ModelID(IntEnum):
     LightLCServerID = 0x130F,
     SensorClientID = 0x1102,
     HealthServerID = 0x0002,
-    HealthClientID = 0x0003
+    HealthClientID = 0x0003,
+    LightCTLServerID = 0x1303
 
 
 class FactoryResetSource(IntEnum):

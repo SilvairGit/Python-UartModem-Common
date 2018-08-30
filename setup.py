@@ -1,6 +1,6 @@
 from setuptools import setup
 
-__version__ = '2.8.0'
+__version__ = '2.9.0'
 
 setup(
     name="silvair_uart_common_libs",
